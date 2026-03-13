@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+<title>Contact Page</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+function checkForm(){
+
+var message = document.getElementById("message").value;
+
+var special = /[^a-zA-Z0-9 ]/;
+
+if(special.test(message)){
+alert("No special characters allowed");
+return false;
+}
+
+window.location="submitted.html";
+
+return false;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Contact Us</h1>
+
+<nav>
+<ul>
+
+<li><a href="home.html">Home</a></li>
+<li><a href="game.html">Games</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+
+<form onsubmit="return checkForm()">
+
+<label>Name</label>
+<input type="text" required>
+
+<br><br>
+
+<label>Date</label>
+<input type="date">
+
+<br><br>
+
+<label>Message</label>
+
+<br>
+
+<textarea id="message" rows="6" cols="40"></textarea>
+
+<br><br>
+
+<input type="submit">
+
+</form>
+
+
+<footer>
+<p>Website Footer</p>
+</footer>
+
+</body>
+
+</html>
